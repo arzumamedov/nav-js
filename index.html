@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/asset/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+        .btn{
+            background-color: red;
+            font-size: 20px;
+            border-radius: 10px;
+            color: white;
+            width: 150px;
+            height: 50px;
+            font-weight: 600;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border: none;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .btn:hover{
+            background-color: aqua;
+            color: black;
+            cursor: pointer;
+        }
+        .nav{
+            height: 93vh;
+            width: 250px;
+            background-color: black;
+            position: relative;
+            padding-top: 20px;
+            transform: translateY(-50px);
+        }
+
+    
+        li{
+            font-size: 23px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            margin-top: 15px;
+            text-align: center;
+        }
+        ul{
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+        }
+        .fa-xmark{
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <button class="btn">Show Menu</button>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Profile</li>
+            <li>Contact</li>
+            <li>Blog</li>
+        </ul>
+        <i class="fa-solid fa-xmark"></i>   
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const nav=document.querySelector(".nav")
+
+        const btn=document.querySelector(".btn")
+        console.log(btn);
+        const icon=document.querySelector(".fa-xmark")
+        console.log(icon);
+        icon.addEventListener("click",function () {
+            nav.style.display="none"
+
+        })
+        btn.addEventListener("click",function () {
+            nav.style.display="block"
+        })
+
+
+
+    </script>
+
+
+</body>
+
+</html>
